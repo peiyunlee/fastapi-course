@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'test-course-backend'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0A5778B53E0E4633B45A1303EB4E9CCC }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E5E3E1B802A54A37B0B7BF478B80B7F6 }}

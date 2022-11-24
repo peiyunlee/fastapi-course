@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_351c4bc3216a4f87b2ba0d1bfdf6a0d2 }}/may3256/test-course:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_351c4bc3216a4f87b2ba0d1bfdf6a0d2 }}/test-course:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -48,4 +48,4 @@ jobs:
         app-name: 'test-course-backend-docker'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_2e201f60eed34ed58115b337ff553435 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_351c4bc3216a4f87b2ba0d1bfdf6a0d2 }}/may3256/test-course:${{ github.sha }}'
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_351c4bc3216a4f87b2ba0d1bfdf6a0d2 }}/test-course:${{ github.sha }}'

@@ -10,11 +10,10 @@ load_dotenv()
 DB_USERNAME = os.environ.get("DB_USERNAME")
 DB_PASSWORD = os.environ.get("DB_PASSWORD")
 DB_NAME = os.environ.get("DB_NAME")
-DB_HOST_DOCKER = 'db:5432'
-DB_HOST_LOCAL = os.environ.get("DB_HOST_LOCAL")
+DB_HOST = os.environ.get("DB_HOST")
 
 # SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST_DOCKER}/{DB_NAME}"
-SQLALCHEMY_DATABASE_URL = f"postgresql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST_LOCAL}/{DB_NAME}"
+SQLALCHEMY_DATABASE_URL = f"postgresql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL

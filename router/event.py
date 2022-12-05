@@ -29,7 +29,7 @@ async def create_event_document(
     return response
 
 
-@router.get('/al', response_model=List[EventResponseSchema], responses={
+@router.get('/alll', response_model=List[EventResponseSchema], responses={
     200: {
         "model": List[EventResponseSchema],
         "description": "Successful Response",
